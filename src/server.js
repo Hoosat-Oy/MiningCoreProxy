@@ -17,7 +17,6 @@ const router = express.Router();
 const forwardToEndpoints = async (req, res, next) => {
   try {
       let responses = {};
-      console.log(req)
       
       for (const baseUrl of endpoints) {
           const fullUrl = `${baseUrl}${req.originalUrl}`;
