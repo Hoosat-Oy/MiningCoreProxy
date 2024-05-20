@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 42800;
 
 // Define the base URLs of the APIs
-const endpoints = [
+const endpoints = process.env.ENDPOINTS.split(",") || [
     'http://fr.htn.pool.hoosat.fi',
     'http://fr.pool.hoosat.fi'
 ];
