@@ -20,7 +20,6 @@ const forwardToEndpoints = async (req, res, next) => {
       
       for (const baseUrl of endpoints) {
           const fullUrl = `${baseUrl}${req.originalUrl}`;
-          console.log(fullUrl);
           const response = await fetch(fullUrl);
           
           if (response.ok) {
